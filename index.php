@@ -18,7 +18,7 @@ if($content){
     
     <?php 
     $data = json_decode(file_get_contents("https://api.binance.me/api/v3/ticker/24hr"), TRUE); //Digunakan untuk mengambil data json API dari binance
-    if($text=="/view"){ //Digunakan untuk mendeteksi pesan yang dikirim pengguna, apakah command atau hanya sebatas pesan random
+    if($text=="/view_binance"){ //Digunakan untuk mendeteksi pesan yang dikirim pengguna, apakah command atau hanya sebatas pesan random
         $a = 1;
         $msg .= "Bot Developed by Kelompok API 7!%0a%0a%0a";
         for($i=0;$i<=13;$i++){
@@ -212,7 +212,7 @@ if($content){
         file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$msg.$tb8."...");
     }
     
-    if($text==="/low"){
+    if($text==="/low_binance"){
         $a = 1;
         for($x=0;$x<15;$x++){
             $msg1 = "Aset yang sedang mengalami penurunan berdasarkan persentase!%0a%0a";
@@ -348,7 +348,7 @@ if($content){
                 }
             file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$low5."...");
         }
-        if($text==="/high"){
+        if($text==="/high_binance"){
             $a = 1;
             for($x=0;$x<15;$x++){
                 $msg1 = "Aset yang sedang mengalami Kenaikan berdasarkan persentase!%0a%0a";
@@ -490,4 +490,4 @@ if($content){
                 file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$hi5."...");
             }
     }
-    ?>
+?>
