@@ -28,7 +28,6 @@ if($content){
         $lowPrice = $data[$i]['lowPrice']; // Mengambil data harga terendah pada api binance
         $lastHigh = $highPrice-$lastPrice; // Mengambil data range dari harga terakhir ke tertinggi
         $lastLow = $lastPrice-$lowPrice; // Mengambil data range dari harga terakhir ke terendah
-
         $tb .= 'No.'.$a.
             '%0aAsset : '.$asset.
             '%0aLast Price : '.$lastPrice.
@@ -212,6 +211,283 @@ if($content){
             }
         file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$msg.$tb8."...");
     }
+    
+    if($text==="/low"){
+        $a = 1;
+        for($x=0;$x<15;$x++){
+            $msg1 = "Aset yang sedang mengalami penurunan berdasarkan persentase!%0a%0a";
+            $checkHL = $data[$x]['priceChangePercent'];
+            if($checkHL < 0){
+                $asset = $data[$x]['symbol'];
+                $lastPrice = $data[$x]['lastPrice'];
+                $highPrice = $data[$x]['highPrice'];
+                $lowPrice = $data[$x]['lowPrice'];
+                $lastHigh = $highPrice-$lastPrice;
+                $lastLow = $lastPrice-$lowPrice;
+
+                $low .= 'No.'.$a.
+                '%0aAsset : '.$asset.
+                '%0aLast Price : '.$lastPrice.
+                '%0aHigh Price : '.$highPrice.
+                '%0aLow Price  : '.$lowPrice.
+                '%0aHigh-Last  : '.$lastHigh.
+                '%0aLast-Low     : '.$lastLow.
+                '%0a%0a';
+                $a++;
+                }
+            }
+            file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$msg1.$low."...");
+            for($x=16;$x<30;$x++){
+                $checkHL = $data[$x]['priceChangePercent'];
+                if($checkHL < 0){
+                    $asset = $data[$x]['symbol'];
+                    $lastPrice = $data[$x]['lastPrice'];
+                    $highPrice = $data[$x]['highPrice'];
+                    $lowPrice = $data[$x]['lowPrice'];
+                    $lastHigh = $highPrice-$lastPrice;
+                    $lastLow = $lastPrice-$lowPrice;
+    
+                    $low1 .= 'No.'.$a.
+                    '%0aAsset : '.$asset.
+                    '%0aLast Price : '.$lastPrice.
+                    '%0aHigh Price : '.$highPrice.
+                    '%0aLow Price  : '.$lowPrice.
+                    '%0aHigh-Last  : '.$lastHigh.
+                    '%0aLast-Low     : '.$lastLow.
+                    '%0a%0a';
+                    $a++;
+                    }
+                }
+            file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$low1."...");
+            for($x=31;$x<45;$x++){
+                $checkHL = $data[$x]['priceChangePercent'];
+                if($checkHL < 0){
+                    $asset = $data[$x]['symbol'];
+                    $lastPrice = $data[$x]['lastPrice'];
+                    $highPrice = $data[$x]['highPrice'];
+                    $lowPrice = $data[$x]['lowPrice'];
+                    $lastHigh = $highPrice-$lastPrice;
+                    $lastLow = $lastPrice-$lowPrice;
+    
+                    $low2 .= 'No.'.$a.
+                    '%0aAsset : '.$asset.
+                    '%0aLast Price : '.$lastPrice.
+                    '%0aHigh Price : '.$highPrice.
+                    '%0aLow Price  : '.$lowPrice.
+                    '%0aHigh-Last  : '.$lastHigh.
+                    '%0aLast-Low     : '.$lastLow.
+                    '%0a%0a';
+                    $a++;
+                    }
+                }
+            file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$low2."...");
+            for($x=46;$x<60;$x++){
+                $checkHL = $data[$x]['priceChangePercent'];
+                if($checkHL < 0){
+                    $asset = $data[$x]['symbol'];
+                    $lastPrice = $data[$x]['lastPrice'];
+                    $highPrice = $data[$x]['highPrice'];
+                    $lowPrice = $data[$x]['lowPrice'];
+                    $lastHigh = $highPrice-$lastPrice;
+                    $lastLow = $lastPrice-$lowPrice;
+    
+                    $low3 .= 'No.'.$a.
+                    '%0aAsset : '.$asset.
+                    '%0aLast Price : '.$lastPrice.
+                    '%0aHigh Price : '.$highPrice.
+                    '%0aLow Price  : '.$lowPrice.
+                    '%0aHigh-Last  : '.$lastHigh.
+                    '%0aLast-Low     : '.$lastLow.
+                    '%0a%0a';
+                    $a++;
+                    }
+                }
+            file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$low3."...");
+            for($x=61;$x<75;$x++){
+                $checkHL = $data[$x]['priceChangePercent'];
+                if($checkHL < 0){
+                    $asset = $data[$x]['symbol'];
+                    $lastPrice = $data[$x]['lastPrice'];
+                    $highPrice = $data[$x]['highPrice'];
+                    $lowPrice = $data[$x]['lowPrice'];
+                    $lastHigh = $highPrice-$lastPrice;
+                    $lastLow = $lastPrice-$lowPrice;
+    
+                    $low4 .= 'No.'.$a.
+                    '%0aAsset : '.$asset.
+                    '%0aLast Price : '.$lastPrice.
+                    '%0aHigh Price : '.$highPrice.
+                    '%0aLow Price  : '.$lowPrice.
+                    '%0aHigh-Last  : '.$lastHigh.
+                    '%0aLast-Low     : '.$lastLow.
+                    '%0a%0a';
+                    $a++;
+                    }
+                }
+            file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$low4."...");
+            for($x=76;$x<100;$x++){
+                $checkHL = $data[$x]['priceChangePercent'];
+                if($checkHL < 0){
+                    $asset = $data[$x]['symbol'];
+                    $lastPrice = $data[$x]['lastPrice'];
+                    $highPrice = $data[$x]['highPrice'];
+                    $lowPrice = $data[$x]['lowPrice'];
+                    $lastHigh = $highPrice-$lastPrice;
+                    $lastLow = $lastPrice-$lowPrice;
+    
+                    $low5 .= 'No.'.$a.
+                    '%0aAsset : '.$asset.
+                    '%0aLast Price : '.$lastPrice.
+                    '%0aHigh Price : '.$highPrice.
+                    '%0aLow Price  : '.$lowPrice.
+                    '%0aHigh-Last  : '.$lastHigh.
+                    '%0aLast-Low     : '.$lastLow.
+                    '%0a%0a';
+                    $a++;
+                    }
+                }
+            file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$low5."...");
+        }
+        if($text==="/high"){
+            $a = 1;
+            for($x=0;$x<15;$x++){
+                $msg1 = "Aset yang sedang mengalami Kenaikan berdasarkan persentase!%0a%0a";
+                $checkHL = $data[$x]['priceChangePercent'];
+                if($checkHL > 0){
+                    $asset = $data[$x]['symbol'];
+                    $lastPrice = $data[$x]['lastPrice'];
+                    $highPrice = $data[$x]['highPrice'];
+                    $lowPrice = $data[$x]['lowPrice'];
+                    $lastHigh = $highPrice-$lastPrice;
+                    $lastLow = $lastPrice-$lowPrice;
+    
+                    $hi .=  'No.'.$a.
+                    '%0aAsset : '.$asset.
+                    '%0aLast Price : '.$lastPrice.
+                    '%0aHigh Price : '.$highPrice.
+                    '%0aLow Price  : '.$lowPrice.
+                    '%0aHigh-Last  : '.$lastHigh.
+                    '%0aLast-Low     : '.$lastLow.
+                    '%0a%0a';
+                    $a++;
+                    }
+                }
+                file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$msg1.$hi."...");
+                for($x=16;$x<30;$x++){
+                    $msg1 = "Aset yang sedang mengalami Kenaikan berdasarkan persentase!%0a%0a";
+                    $checkHL = $data[$x]['priceChangePercent'];
+                    if($checkHL > 0){
+                        $asset = $data[$x]['symbol'];
+                        $lastPrice = $data[$x]['lastPrice'];
+                        $highPrice = $data[$x]['highPrice'];
+                        $lowPrice = $data[$x]['lowPrice'];
+                        $lastHigh = $highPrice-$lastPrice;
+                        $lastLow = $lastPrice-$lowPrice;
         
-}
+                        $hi1 .=  'No.'.$a.
+                        '%0aAsset : '.$asset.
+                        '%0aLast Price : '.$lastPrice.
+                        '%0aHigh Price : '.$highPrice.
+                        '%0aLow Price  : '.$lowPrice.
+                        '%0aHigh-Last  : '.$lastHigh.
+                        '%0aLast-Low     : '.$lastLow.
+                        '%0a%0a';
+                        $a++;
+                        }
+                    }
+                file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$hi1."...");
+                for($x=31;$x<45;$x++){
+                    $msg1 = "Aset yang sedang mengalami Kenaikan berdasarkan persentase!%0a%0a";
+                    $checkHL = $data[$x]['priceChangePercent'];
+                    if($checkHL > 0){
+                        $asset = $data[$x]['symbol'];
+                        $lastPrice = $data[$x]['lastPrice'];
+                        $highPrice = $data[$x]['highPrice'];
+                        $lowPrice = $data[$x]['lowPrice'];
+                        $lastHigh = $highPrice-$lastPrice;
+                        $lastLow = $lastPrice-$lowPrice;
+        
+                        $hi2 .=  'No.'.$a.
+                        '%0aAsset : '.$asset.
+                        '%0aLast Price : '.$lastPrice.
+                        '%0aHigh Price : '.$highPrice.
+                        '%0aLow Price  : '.$lowPrice.
+                        '%0aHigh-Last  : '.$lastHigh.
+                        '%0aLast-Low     : '.$lastLow.
+                        '%0a%0a';
+                        $a++;
+                        }
+                    }
+                file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$hi2."...");
+                for($x=46;$x<60;$x++){
+                    $msg1 = "Aset yang sedang mengalami Kenaikan berdasarkan persentase!%0a%0a";
+                    $checkHL = $data[$x]['priceChangePercent'];
+                    if($checkHL > 0){
+                        $asset = $data[$x]['symbol'];
+                        $lastPrice = $data[$x]['lastPrice'];
+                        $highPrice = $data[$x]['highPrice'];
+                        $lowPrice = $data[$x]['lowPrice'];
+                        $lastHigh = $highPrice-$lastPrice;
+                        $lastLow = $lastPrice-$lowPrice;
+        
+                        $hi3 .=  'No.'.$a.
+                        '%0aAsset : '.$asset.
+                        '%0aLast Price : '.$lastPrice.
+                        '%0aHigh Price : '.$highPrice.
+                        '%0aLow Price  : '.$lowPrice.
+                        '%0aHigh-Last  : '.$lastHigh.
+                        '%0aLast-Low     : '.$lastLow.
+                        '%0a%0a';
+                        $a++;
+                        }
+                    }
+                file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$hi3."...");
+                for($x=60;$x<75;$x++){
+                    $msg1 = "Aset yang sedang mengalami Kenaikan berdasarkan persentase!%0a%0a";
+                    $checkHL = $data[$x]['priceChangePercent'];
+                    if($checkHL > 0){
+                        $asset = $data[$x]['symbol'];
+                        $lastPrice = $data[$x]['lastPrice'];
+                        $highPrice = $data[$x]['highPrice'];
+                        $lowPrice = $data[$x]['lowPrice'];
+                        $lastHigh = $highPrice-$lastPrice;
+                        $lastLow = $lastPrice-$lowPrice;
+        
+                        $hi4 .=  'No.'.$a.
+                        '%0aAsset : '.$asset.
+                        '%0aLast Price : '.$lastPrice.
+                        '%0aHigh Price : '.$highPrice.
+                        '%0aLow Price  : '.$lowPrice.
+                        '%0aHigh-Last  : '.$lastHigh.
+                        '%0aLast-Low     : '.$lastLow.
+                        '%0a%0a';
+                        $a++;
+                        }
+                    }
+                file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$hi4."...");
+                for($x=76;$x<100;$x++){
+                    $msg1 = "Aset yang sedang mengalami Kenaikan berdasarkan persentase!%0a%0a";
+                    $checkHL = $data[$x]['priceChangePercent'];
+                    if($checkHL > 0){
+                        $asset = $data[$x]['symbol'];
+                        $lastPrice = $data[$x]['lastPrice'];
+                        $highPrice = $data[$x]['highPrice'];
+                        $lowPrice = $data[$x]['lowPrice'];
+                        $lastHigh = $highPrice-$lastPrice;
+                        $lastLow = $lastPrice-$lowPrice;
+        
+                        $hi5 .=  'No.'.$a.
+                        '%0aAsset : '.$asset.
+                        '%0aLast Price : '.$lastPrice.
+                        '%0aHigh Price : '.$highPrice.
+                        '%0aLow Price  : '.$lowPrice.
+                        '%0aHigh-Last  : '.$lastHigh.
+                        '%0aLast-Low     : '.$lastLow.
+                        '%0a%0a';
+                        $a++;
+                        }
+                    }
+                file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$hi5."...");
+            }
+    }
     ?>
